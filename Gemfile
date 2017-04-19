@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'omniauth-facebook'
 gem 'devise'
+gem 'noty-rails', '~> 2.3', '>= 2.3.8'
 
 
 
