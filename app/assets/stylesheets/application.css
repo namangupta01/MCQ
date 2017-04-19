@@ -42,3 +42,8 @@ aside div div {
 	border: solid thin black;
 	z-index: 10;
 }
+#timer{
+	position: fixed;
+	right: 10%;
+	top: 3%;
+}
