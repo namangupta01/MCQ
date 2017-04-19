@@ -11,17 +11,25 @@ aside{
 .question{
 	display: flex;
 	flex-direction: column;
-	width: 40%;
+	width: 50%;
+	height: 40vh;
 }
 
+
 .question>div{
-	background-color:red;
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 }
 
 .question>div>div{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	height: 7em;
+}
+
+.question>div>div>div{
+	display: flex;
 }
 
 #submit_question{
@@ -29,5 +37,5 @@ aside{
 	justify-content: space-between;
 }
 #submit_question>input{
-	width: 50%;
+	width: 20%;
 }

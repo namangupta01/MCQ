@@ -13,15 +13,15 @@
 
 <main>
 <%= form_tag '/next',remote: true, class: :question do%>	
-	<p><%= @question.question_content %></p>
+	<h3><%= @question.question_content %></h3>
 	<div>
 		<div>
-			<%= radio_button_tag 'answer_option','option_a' %><%= @question.option_a %><br>
-			<%= radio_button_tag 'answer_option','option_b' %><%= @question.option_b %>
+			<div><%= radio_button_tag 'answer_option','option_a' %><%= @question.option_a %></div>
+			<div><%= radio_button_tag 'answer_option','option_b' %><%= @question.option_b %></div>
 		</div>
 		<div>	
-			<%= radio_button_tag 'answer_option','option_c' %><%= @question.option_c %><br>
-			<%= radio_button_tag 'answer_option','option_d' %><%= @question.option_d %>
+			<div><%= radio_button_tag 'answer_option','option_c' %><%= @question.option_c %></div>
+			<div><%= radio_button_tag 'answer_option','option_d' %><%= @question.option_d %></div>
 		</div>
 		<br>
 	</div>

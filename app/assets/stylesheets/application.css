@@ -28,4 +28,5 @@ aside{
 	left: 70%;
 	top: 10%;
 	display: inline-block;
+	z-index: 10;
 }
