@@ -27,5 +27,18 @@ aside{
 	position: absolute;
 	left: 70%;
 	top: 10%;
-	display: inline-block;
+	width: 20%;
+	background-color: yellow;
+}
+aside div {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+aside div div {
+
+	margin: 0 0 0 0;
+	padding: 2% 2% 2% 2%; 
+	width: 10%;
+	border: solid thin black;
 }
