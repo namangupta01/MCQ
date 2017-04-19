@@ -1,0 +1,23 @@
+<aside>
+	<ul>
+		<% @questions.each do |q| %>
+			<li>
+				<% counter=1 %>
+				<% str = "Question "+counter.to_s %>
+				<% counter+=1 %>
+				<%= link_to str,"/question/#{q.id}" %>
+			</li>
+		<% end %>	
+	</ul>
+</aside>
+
+
+<%= form_tag '/next',remote: true do%>	
+	<p><%= @question.question_content %></p>
+	<%= radio_button_tag 'answer_option','option_a' %><%= @question.option_a %>
+	<%= radio_button_tag 'answer_option','option_b' %><%= @question.option_b %>
+	<%= radio_button_tag 'answer_option','option_c' %><%= @question.option_c %>
+	<%= radio_button_tag 'answer_option','option_d' %><%= @question.option_d %>
+	<%= hidden_field_tag 'question_id', @question.id %>
+	<%= submit_tag 'Submit' %>	
+<% end %>	
