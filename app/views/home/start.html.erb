@@ -1,5 +1,21 @@
+<%= link_to 'logout', destroy_user_session_path, method: :delete , data: {confirm: 'Are you Sure?'}%>
 <main>
-	<%= @questions.first.question_content %>
+<%= form_tag '/next',remote: true, class: :question do%>	
+	<h4><%= @question.question_content %></h4>
+	<div>
+		<div>
+			<div><%= radio_button_tag 'answer_option','option_a' %><%= @question.option_a %></div>
+			<div><%= radio_button_tag 'answer_option','option_b' %><%= @question.option_b %></div>
+		</div>
+		<div>	
+			<div><%= radio_button_tag 'answer_option','option_c' %><%= @question.option_c %></div>
+			<div><%= radio_button_tag 'answer_option','option_d' %><%= @question.option_d %></div>
+		</div>
+		<br>
+	</div>
+	<%= hidden_field_tag 'question_id', @question.id %>
+	<div id="submit_question"><%= submit_tag 'Submit'%></div>	
+<% end %>	
 </main>
 <% counter=1 %>
 <aside>
