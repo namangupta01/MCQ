@@ -1,8 +1,8 @@
+<% counter=1 %>
 <aside>
 	<ul>
 		<% @questions.each do |q| %>
 			<li>
-				<% counter=1 %>
 				<% str = "Question "+counter.to_s %>
 				<% counter+=1 %>
 				<%= link_to str,"/question/#{q.id}" %>
@@ -11,17 +11,16 @@
 	</ul>
 </aside>
 
-
-<%= form_tag '/next',remote: true,class: :question do%>	
+<main>
+<%= form_tag '/next',remote: true, class: :question do%>	
 	<p><%= @question.question_content %></p>
 	<div>
 		<div>
-			<%= radio_button_tag 'answer_option','option_a' %><%= @question.option_a %>
+			<%= radio_button_tag 'answer_option','option_a' %><%= @question.option_a %><br>
 			<%= radio_button_tag 'answer_option','option_b' %><%= @question.option_b %>
 		</div>
-		<br>
 		<div>	
-			<%= radio_button_tag 'answer_option','option_c' %><%= @question.option_c %>
+			<%= radio_button_tag 'answer_option','option_c' %><%= @question.option_c %><br>
 			<%= radio_button_tag 'answer_option','option_d' %><%= @question.option_d %>
 		</div>
 		<br>
@@ -29,3 +28,4 @@
 	<%= hidden_field_tag 'question_id', @question.id %>
 	<div id="submit_question"><%= submit_tag 'Submit'%></div>	
 <% end %>	
+</main>

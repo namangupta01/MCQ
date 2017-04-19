@@ -19,6 +19,7 @@
 main{
 	display: inline-block;
 	position: fixed;
+	width: 100%;
 	left: 10%;
 	top: 10%;
 }

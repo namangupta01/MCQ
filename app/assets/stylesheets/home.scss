@@ -17,17 +17,17 @@ aside{
 .question{
 	display: flex;
 	flex-direction: column;
-	width: 50%;
+	width: 40%;
 }
 
 .question>div{
+	background-color:red;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .question>div>div{
-	display: flex;
-	justify-content: space-between;
 }
 
 #submit_question{
