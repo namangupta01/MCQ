@@ -17,7 +17,6 @@
 
 
 main{
-	display: inline-block;
 	position: fixed;
 	width: 100%;
 	left: 10%;
@@ -38,7 +37,7 @@ aside div {
 aside div div {
 
 	margin: 0 0 0 0;
-	padding: 2% 2% 2% 2%; 
+	padding: 2% 2% 2% 2%;
 	width: 10%;
 	border: solid thin black;
 	z-index: 10;

@@ -1,16 +1,4 @@
 <% counter=1 %>
-<aside>
-	<div>
-		<% @questions.each do |q| %>
-			<div>
-				<% str = counter.to_s %>
-				<% counter+=1 %>
-				<%= link_to str,"/question/#{q.id}" %>
-			</div>
-		<% end %>	
-	</div>
-</aside>
-
 <main>
 <%= form_tag '/next',remote: true, class: :question do%>	
 	<h4><%= @question.question_content %></h4>
@@ -29,3 +17,14 @@
 	<div id="submit_question"><%= submit_tag 'Submit'%></div>	
 <% end %>	
 </main>
+<aside>
+	<div>
+		<% @questions.each do |q| %>
+			<div>
+				<% str = counter.to_s %>
+				<% counter+=1 %>
+				<%= link_to str,"/question/#{q.id}" %>
+			</div>
+		<% end %>	
+	</div>
+</aside>
