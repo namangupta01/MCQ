@@ -13,7 +13,7 @@
 
 <main>
 <%= form_tag '/next',remote: true, class: :question do%>	
-	<h3><%= @question.question_content %></h3>
+	<h4><%= @question.question_content %></h4>
 	<div>
 		<div>
 			<div><%= radio_button_tag 'answer_option','option_a' %><%= @question.option_a %></div>

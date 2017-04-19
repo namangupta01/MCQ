@@ -39,3 +39,13 @@ aside{
 #submit_question>input{
 	width: 20%;
 }
+
+form{
+	border: 2px solid lightgrey;
+	padding: 28px;
+}
+
+form>h4{
+	height:50%;
+	overflow: scroll;
+}
