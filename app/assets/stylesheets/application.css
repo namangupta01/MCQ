@@ -47,3 +47,29 @@ aside div div {
 	right: 10%;
 	top: 3%;
 }
+#log-in{
+	position: fixed;
+	top: 10%;
+	left: 25%;
+	width: 50%;
+}
+#sign-up{
+	position: fixed;
+	top: 10%;
+	left: 25%;
+	width: 50%;
+}
+#login-with-facebook{
+	position: relative;
+	margin-top: 2%;
+	padding: 2% 2% 2% 2%;
+	left: 35%;
+	width: 30%;
+	text-align: center;
+	background-color: #3b5998;
+}
+
+#login-with-facebook > a{
+	color: white;
+	text-decoration: none;
+}
