@@ -1,14 +1,14 @@
 <% counter=1 %>
 <aside>
-	<ul>
+	<div>
 		<% @questions.each do |q| %>
-			<li>
-				<% str = "Question "+counter.to_s %>
+			<div>
+				<% str = counter.to_s %>
 				<% counter+=1 %>
 				<%= link_to str,"/question/#{q.id}" %>
-			</li>
+			</div>
 		<% end %>	
-	</ul>
+	</div>
 </aside>
 
 <main>
