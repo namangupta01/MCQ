@@ -44,7 +44,8 @@ class HomeController < ApplicationController
 	end
 
 	def start
-		@questions = Question.all
+		@question = Question.first
+		@questions=Question.all
 	end
 
 end
