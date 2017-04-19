@@ -1,4 +1,5 @@
 <%= link_to 'logout', destroy_user_session_path, method: :delete , data: {confirm: 'Are you Sure?'}%>
+<%= link_to 'Submit Test', '/submit', method: :get , data: {confirm: 'Are you Sure?'}%>
 <% counter=1 %>
 <main>
 <%= form_tag '/next',remote: true, class: :question do%>	
