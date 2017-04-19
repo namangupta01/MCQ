@@ -27,7 +27,7 @@ class HomeController < ApplicationController
 	      	}	
     	end
 
-end
+	end
 
 
 	def submit 
@@ -38,6 +38,9 @@ end
 				@score=@score+1
 			end
 		end
+
+		@score = current_user.Score.create(:user_score => @score)
+
 	end
 
 	def start

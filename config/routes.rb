@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post '/next' => 'home#next'
 
   get '/start' => 'home#start'
+  get '/submit' => 'home#submit'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
