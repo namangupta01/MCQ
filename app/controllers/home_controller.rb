@@ -2,7 +2,6 @@ class HomeController < ApplicationController
 	before_action :authenticate_user!
 
 	def index
-		@questions = Question.all
 	end
 
 	def question
@@ -29,4 +28,20 @@ class HomeController < ApplicationController
     	end
 
 	end
+
+
+	def submit 
+		@score=0
+		user_all_responses=current_user.user_responses
+		user_all_responses.each do |user_response|
+			if user_response.answer == user_response.question.answer
+				@score=@score+1
+			end
+		end
+	end
+
+	def start
+		@questions = Question.all
+	end
+
 end

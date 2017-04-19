@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+main{
+	display: inline-block;
+	position: fixed;
+	left: 10%;
+	top: 10%;
+}
+aside{
+	position: absolute;
+	left: 70%;
+	top: 10%;
+	display: inline-block;
+}

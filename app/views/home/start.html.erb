@@ -1,0 +1,16 @@
+
+<main>
+	<%= @questions.first.question_content %>
+</main>
+<% counter=1 %>
+<aside>
+	<ul>
+		<% @questions.each do |q| %>
+			<li>
+				<% str = "Question "+counter.to_s %>
+				<% counter+=1 %>
+				<%= link_to str,"/question/#{q.id}" %>
+			</li>
+		<% end %>	
+	</ul>
+</aside>

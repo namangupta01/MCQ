@@ -1,14 +1,2 @@
-<aside>
-	<ul>
-		<% @questions.each do |q| %>
-			<li>
-				<% counter=1 %>
-				<% str = "Question "+counter.to_s %>
-				<% counter+=1 %>
-				<%= link_to str,"/question/#{q.id}" %>
-			</li>
-		<% end %>	
-	</ul>
-</aside>
-
 <p>Welcome to Quiz.Click on the Links Given aside for the Questions.</p>
+<a href="/start">Start</a>
