@@ -41,4 +41,5 @@ aside div div {
 	padding: 2% 2% 2% 2%; 
 	width: 10%;
 	border: solid thin black;
+	z-index: 10;
 }
