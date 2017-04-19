@@ -1,3 +1,39 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+aside{
+	position:fixed;
+	left: 10px;
+}
+
+.question{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.question>div{
+	display: flex;
+	flex-direction: column;
+}
+
+.question>div>div{
+	display: flex;
+	justify-content: space-between;
+}
+
+#submit_question{
+	display:flex;
+	justify-content: space-between;
+}
+#submit_question>input{
+	width: 50%;
+}

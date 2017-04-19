@@ -12,12 +12,20 @@
 </aside>
 
 
-<%= form_tag '/next',remote: true do%>	
+<%= form_tag '/next',remote: true,class: :question do%>	
 	<p><%= @question.question_content %></p>
-	<%= radio_button_tag 'answer_option','option_a' %><%= @question.option_a %>
-	<%= radio_button_tag 'answer_option','option_b' %><%= @question.option_b %>
-	<%= radio_button_tag 'answer_option','option_c' %><%= @question.option_c %>
-	<%= radio_button_tag 'answer_option','option_d' %><%= @question.option_d %>
+	<div>
+		<div>
+			<%= radio_button_tag 'answer_option','option_a' %><%= @question.option_a %>
+			<%= radio_button_tag 'answer_option','option_b' %><%= @question.option_b %>
+		</div>
+		<br>
+		<div>	
+			<%= radio_button_tag 'answer_option','option_c' %><%= @question.option_c %>
+			<%= radio_button_tag 'answer_option','option_d' %><%= @question.option_d %>
+		</div>
+		<br>
+	</div>
 	<%= hidden_field_tag 'question_id', @question.id %>
-	<%= submit_tag 'Submit' %>	
+	<div id="submit_question"><%= submit_tag 'Submit'%></div>	
 <% end %>	
