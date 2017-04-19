@@ -6,8 +6,8 @@
 .question{
 	display: flex;
 	flex-direction: column;
+	word-wrap: break-word;
 	width: 50%;
-	height: 40vh;
 }
 
 
@@ -41,6 +41,6 @@ form{
 }
 
 form>h4{
+	line-height:150%;
 	height:50%;
-	overflow: scroll;
 }
