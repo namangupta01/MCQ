@@ -8,10 +8,12 @@ class HomeController < ApplicationController
 	def question
 		@questions = Question.all
 		@question = Question.find(params[:id])
+		total_questions=@questions.length
+		answered=current_user.user_responses.all.length
+		@percentage=answered*100/total_questions
 	end
 
 	def next
-
 		question_id = params["question_id"].to_i
 		user_answer_option=params["answer_option"]
 	   	user_question_response = current_user.user_responses.find_by_question_id(question_id)

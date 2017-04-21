@@ -21,11 +21,11 @@
 	<div id="change-question">
 		<%= form_tag '/previous_question',class: 'previous' do %>
 			<%= hidden_field_tag 'question_id',@question.id %>
-			<%= submit_tag 'Previous' , id: 'previous_question' %>
+			<div type="submit" class="btn btn-default" id= 'next_question'>Previous</div>
 		<% end %>
 		<%= form_tag '/next_question',class: 'next' do %>
 			<%= hidden_field_tag 'question_id',@question.id %>
-			<%= submit_tag 'Next' , id: 'next_question' %>
+			<div type="submit" class="btn btn-default" id= 'next_question'>Next</div>
 		<% end %>
 	</div>
 </main>
@@ -41,3 +41,9 @@
 	</div>
 </aside>
 <div id="timer"></div>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="<%= @percentage %>" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @percentage %>%">
+    <%= @percentage %>
+  </div>
+</div>
