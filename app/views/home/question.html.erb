@@ -16,7 +16,7 @@
 		<br>
 	</div>
 	<%= hidden_field_tag 'question_id', @question.id %>
-		<%= submit_tag 'Submit',id:"submit_question"%>
+		<%= submit_tag 'Submit',id:'submit_question'%>
 	<% end %>
 	<div id="change-question">
 		<%= form_tag '/previous_question',class: 'previous' do %>

@@ -1,1 +1,14 @@
+var error=true;
+d=document.getElementsByName("answer_option");
+for(i=0;i<d.length;i++){
+
+	if (d[i].checked){
+		error=false;
+	}
+}
+if (error==true){
+	noty({text: "Please select any answer", theme: "relax", type: 'failure', layout: 'topRight'});
+}
+else{
 noty({text: "Updated", theme: "relax", type: 'success', layout: 'topRight'});
+}
