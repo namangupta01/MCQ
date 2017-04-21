@@ -1,7 +1,7 @@
 <%= link_to 'logout', destroy_user_session_path, method: :delete , data: {confirm: 'Are you Sure?'}%>
 <main>
 <%= form_tag '/next',remote: true, class: :question do%>	
-	<h4><%= @question.question_content %></h4>
+	<h4 class="well"><%= @question.question_content %></h4>
 	<div>
 		<div>
 			<div><%= radio_button_tag 'answer_option','option_a' %><%= @question.option_a %></div>

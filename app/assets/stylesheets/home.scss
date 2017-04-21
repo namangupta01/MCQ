@@ -6,7 +6,6 @@
 .question{
 	display: flex;
 	flex-direction: column;
-	word-wrap: break-word;
 	width: 50%;
 }
 
@@ -17,24 +16,32 @@
 }
 
 .question>div>div{
+
 	display: flex;
+	width :40%;
 	justify-content: space-around;
 	flex-direction: column;
-	height: 7em;
 }
 
 .question>div>div>div{
 	display: flex;
+	word-wrap: break-word;
 }
 
 #submit_question{
 	display:flex;
 	justify-content: space-between;
 }
-#submit_question>input{
-	width: 20%;
+#submit_question{
+	position:relative;
+	left:88%;
+	width: 14%;
 }
-
+.next{
+	border-style:none;
+}
+#next_question{
+}
 form{
 	border: 2px solid lightgrey;
 	padding: 28px;
@@ -43,4 +50,12 @@ form{
 form>h4{
 	line-height:150%;
 	height:50%;
+}
+#change-question{
+	width:50%;
+	display:flex;
+	justify-content:space-between;
+}
+.previous{
+	border-style:none;
 }
