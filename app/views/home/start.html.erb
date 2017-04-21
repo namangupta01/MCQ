@@ -30,3 +30,9 @@
 	</div>
 </aside>
 <div id="timer"></div>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="<%= @percentage %>" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @percentage %>%">
+    <%= @percentage %>% Complete
+  </div>
+</div>
