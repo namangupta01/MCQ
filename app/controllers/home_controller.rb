@@ -28,10 +28,10 @@ class HomeController < ApplicationController
 
 	def next_question
 		question_id=params["question_id"].to_i
-		data=Hash.new
-		question=Question.where('id > ?',question_id).first
-		data["question"]=question
-		render json: data
+		@question=Question.where('id > ?',question_id).first
+		# data=Hash.new
+		# data["question"]=question
+		# render json: data
 	end
 
 	def test_completed?
