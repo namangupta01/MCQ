@@ -30,7 +30,6 @@ setInterval(function(){
 },1000);
  function onBodyLoad(){	
  	console.log(document.getElementById("next_question"))
- 	document.getElementById("next_question").innerHtml="<div>asdasasd<div>"
 	document.getElementById("next_question").addEventListener("click",function(event){
 	event.preventDefault();
 	$.ajax({
