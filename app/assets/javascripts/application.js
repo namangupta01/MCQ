@@ -17,7 +17,6 @@
 //= require_tree .
 //= require bootstrap
 //= require data-confirm-modal
-
 var countDown = new Date("Apr 23, 2017 15:37:25").getTime();
 setInterval(function(){
 	var now = new Date().getTime();
@@ -29,3 +28,24 @@ setInterval(function(){
     document.getElementById("timer").innerText=days+"days "+hours+"hours "+minutes+"mins "+seconds+"sec";
 
 },1000);
+ function onBodyLoad(){	
+ 	console.log(document.getElementById("next_question"))
+ 	document.getElementById("next_question").innerHtml="<div>asdasasd<div>"
+	document.getElementById("next_question").addEventListener("click",function(event){
+	event.preventDefault();
+	$.ajax({
+		url:'/next_question',
+		method:'POST',
+		data:{question_id: document.getElementById("question_id").value},
+		success:function(data){
+			console.log("its working")
+		},
+		error:function(){
+			console.log("can't connect to the server")
+		}
+	})
+})
+}
+window.addEventListener("load",function(){
+	onBodyLoad();
+})

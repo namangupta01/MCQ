@@ -24,7 +24,17 @@ class HomeController < ApplicationController
 	   	else
 	   		current_user.user_responses.create(:question_id => question_id ,:answer => user_answer_option)	
     	end
+	end
 
+	def next_question
+		byebug
+		question_id=params["question_id"].to_i
+		byebug
+		data=Hash.new
+		question=Question.find_by_id(question_id+1)
+		data["question"]=question
+		byebug
+		render json: data
 	end
 
 	def test_completed?
