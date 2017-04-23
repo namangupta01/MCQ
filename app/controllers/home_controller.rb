@@ -27,13 +27,11 @@ class HomeController < ApplicationController
 	end
 
 	def next_question
-		byebug
 		question_id=params["question_id"].to_i
-		byebug
 		data=Hash.new
 		question=Question.find_by_id(question_id+1)
-		data["question"]=question
 		byebug
+		data["question"]=question
 		render json: data
 	end
 

@@ -35,15 +35,17 @@ setInterval(function(){
 	$.ajax({
 		url:'/next_question',
 		method:'POST',
+		beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+
 		data:{question_id: document.getElementById("question_id").value},
 		success:function(data){
-			console.log("its working")
+			console.log(data)
 		},
 		error:function(){
 			console.log("can't connect to the server")
 		}
-	})
-})
+	});
+});
 }
 window.addEventListener("load",function(){
 	onBodyLoad();
