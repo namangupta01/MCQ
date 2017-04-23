@@ -44,55 +44,55 @@
       aria-valuenow="<%= @percentage %>" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @percentage %>%">
       <%= @percentage %>% Complete
     </div>
-
-# <%= link_to 'logout', destroy_user_session_path, method: :delete , data: {confirm: 'Are you Sure?'}%>
-# <%= link_to 'Submit Test', '/submit', method: :get , data: {confirm: 'Are you Sure?'}%>
-# <% counter=1 %>
-# <main>
-# <%= form_tag '/submit_question',remote: true, class: :question do%>	
-# 	<h4 class="well"><%= @question.question_content %></h4>
-# 	<div>
-# 		<div>
-# 			<div class="well"><%= radio_button_tag 'answer_option','option_a' %>&nbsp;<%= @question.option_a %></div>
-# 			<div class="well"><%= radio_button_tag 'answer_option','option_b' %>&nbsp;<%= @question.option_b %></div>
-# 		</div>
-# 		<div>	
-# 			<div class="well"><%= radio_button_tag 'answer_option','option_c' %>&nbsp;<%= @question.option_c %></div>
-# 			<div class="well"><%= radio_button_tag 'answer_option','option_d' %>&nbsp;<%= @question.option_d %></div>
-# 		</div>
-# 		<br>
-# 	</div>
-# 	<%= hidden_field_tag 'question_id', @question.id %>
-# 		<input type="submit" class="btn btn-default" id="submit_question">
-# 	<% end %>
-# 	<div id="change-question">
-# 		<%= form_tag '/previous_question',remote: true,class: 'previous' do %>
-# 			<%= hidden_field_tag 'question_id',@question.id %>
-# 			<div type="submit" class="btn btn-default" id= 'previous_question'>Previous</div>
-# 		<% end %>
-# 		<%= form_tag '/next_question',class: 'next' do %>
-# 			<%= hidden_field_tag 'question_id',@question.id %>
-# 			<input type="submit" class="btn btn-default" id= 'next_question' value="submit">
-# 		<% end %>
-# 	</div>
-# </main>
-# <aside>
-# 	<div>
-# 		<% @questions.each do |q| %>
-# 			<div>
-# 				<% str = counter.to_s %>
-# 				<% counter+=1 %>
-# 				<%= link_to str,"/question/#{q.id}" %>
-# 			</div>
-# 		<% end %>	
-# 	</div>
-# </aside>
-# <div id="timer"></div>
-# <div class="progress">
-#   <div class="progress-bar progress-bar-striped active" role="progressbar"
-#   aria-valuenow="<%= @percentage %>" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @percentage %>%">
-#     <%= @percentage %>% Complete
-  </div>
+<!-- 
+  <%= link_to 'logout', destroy_user_session_path, method: :delete , data: {confirm: 'Are you Sure?'}%>
+  <%= link_to 'Submit Test', '/submit', method: :get , data: {confirm: 'Are you Sure?'}%>
+  <% counter=1 %> -->
+<!-- <main> 
+<%= form_tag '/submit_question',remote: true, class: :question do%>	
+	<h4 class="well"><%= @question.question_content %></h4>
+	<div>
+		<div>
+			<div class="well"><%= radio_button_tag 'answer_option','option_a' %>&nbsp;<%= @question.option_a %></div>
+			<div class="well"><%= radio_button_tag 'answer_option','option_b' %>&nbsp;<%= @question.option_b %></div>
+		</div>
+		<div>	
+			<div class="well"><%= radio_button_tag 'answer_option','option_c' %>&nbsp;<%= @question.option_c %></div>
+			<div class="well"><%= radio_button_tag 'answer_option','option_d' %>&nbsp;<%= @question.option_d %></div>
+		</div>
+		<br>
+	</div>
+	<%= hidden_field_tag 'question_id', @question.id %>
+		<input type="submit" class="btn btn-default" id="submit_question">
+	<% end %>
+	<div id="change-question">
+		<%= form_tag '/previous_question',remote: true,class: 'previous' do %>
+			<%= hidden_field_tag 'question_id',@question.id %>
+			<div type="submit" class="btn btn-default" id= 'previous_question'>Previous</div>
+		<% end %> -->
+<!-- 		<%= form_tag '/next_question',class: 'next' do %>
+			<%= hidden_field_tag 'question_id',@question.id %>
+			<input type="submit" class="btn btn-default" id= 'next_question' value="submit">
+		<% end %> -->
+<!-- 	</div>
+</main>
+<aside>
+	<div>
+		<% @questions.each do |q| %>
+			<div>
+				<% str = counter.to_s %>
+				<% counter+=1 %>
+				<%= link_to str,"/question/#{q.id}" %>
+			</div>
+		<% end %>	
+	</div>
+</aside>
+<div id="timer"></div>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="<%= @percentage %>" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @percentage %>%">
+    <%= @percentage %>% Complete
+  </div> -->
 
   <div class="row container-fluid page">
     <nav aria-label="Page navigation">
