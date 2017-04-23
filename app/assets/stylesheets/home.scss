@@ -34,6 +34,7 @@
 }
 #submit_question{
 	position:relative;
+	background-color:red;
 	left:88%;
 	width: 14%;
 }
@@ -56,10 +57,23 @@ form>h4{
 	display:flex;
 	justify-content:space-between;
 }
+
+
 .previous{
 	border-style:none;
 }
 .progress{
 	margin-left:10%;
 	width:50%;
+}
+
+#next-change-question{
+}
+
+.next-from-start{
+	border-style:none;
+}
+#start_next_question{
+	position:relative;
+	left:90%;
 }

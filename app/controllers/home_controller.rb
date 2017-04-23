@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 	before_action :authenticate_user!
-	# before_action :test_completed? , except: [:submit]
+	 before_action :test_completed? , except: [:submit]
 
 	def index
 

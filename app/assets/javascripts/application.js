@@ -18,7 +18,7 @@
 //= require bootstrap
 //= require data-confirm-modal
 
-var countDown = new Date("Apr 20, 2017 15:37:25").getTime();
+var countDown = new Date("Apr 23, 2017 15:37:25").getTime();
 setInterval(function(){
 	var now = new Date().getTime();
 	var distance =  countDown - now ;
