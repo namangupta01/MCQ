@@ -2,7 +2,7 @@
 <%= link_to 'Submit Test', '/submit', method: :get , data: {confirm: 'Are you Sure?'}%>
 <% counter=1 %>
 <main>
-<%= form_tag '/next',remote: true, class: :question do%>	
+<%= form_tag '/submit_question',remote: true, class: :question do%>	
 	<h4 class="well"><%= @question.question_content %></h4>
 	<div>
 		<div>
