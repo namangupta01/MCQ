@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/question/:id' => 'home#question'
   post '/submit_question'=> 'home#submit_question'
-  post 'next_question' => 'home#next_question'
+  post '/next_question' => 'home#next_question'
+  post '/previous_question' => 'home#previous_question'
 
   get '/start' => 'home#start'
   get '/submit' => 'home#submit'

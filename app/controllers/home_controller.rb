@@ -34,6 +34,14 @@ class HomeController < ApplicationController
 		# render json: data
 	end
 
+	def previous_question
+		question_id=params["question_id"].to_i
+		@question=Question.where('id < ?',question_id).last
+				# data=Hash.new
+		# data["question"]=question
+		# render json: data
+	end
+
 	def test_completed?
 		score = Score.find_by_user_id(current_user.id)
 		if score
