@@ -29,7 +29,6 @@ setInterval(function(){
 
 },1000);
  function onBodyLoad(){	
- 	console.log(document.getElementById("next_question"))
 	document.getElementById("next_question").addEventListener("click",function(event){
 	event.preventDefault();
 	$.ajax({
@@ -39,7 +38,18 @@ setInterval(function(){
 
 		data:{question_id: document.getElementById("question_id").value},
 		success:function(data){
-			console.log(data)
+			element=document.getElementById("question-content")
+			element.innerText=data.question.question_content
+			optionElements=document.getElementsByClassName("answer-option")
+			optionElements[0].innerHtml="<input type='radio' name='answer_option' id='answer_option_option_a' value='option_a'>&nbsp;aasd"
+			optionElements[1].innerText=data.question.option_b
+			optionElements[3].innerText=data.question.option_d
+			optionElements[2].innerText=data.question.option_c
+			idElements=document.getElementsByName("question_id")
+			idElements[0].value=data.question.id;
+			idElements[1].value=data.question.id;
+			idElements[2].value=data.question.id;
+			onBodyLoad();
 		},
 		error:function(){
 			console.log("can't connect to the server")
