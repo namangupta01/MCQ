@@ -1,24 +1,9 @@
 <%= render 'header' %>
 <%= render 'main' %>
+<%= render 'aside' %>
   <div class="row progress">
     <div class="progress-bar progress-bar-striped active" role="progressbar"
       aria-valuenow="<%= @percentage %>" aria-valuemin="0" aria-valuemax="100" style= "width: <%= @percentage %>%">
       <%= @percentage %>% Complete
     </div>
   </div>
-<aside>
-  <div class="row container-fluid page">
-    <nav aria-label="Page navigation">
-      <ul class="pagination">
-        <% counter=1 %> 
-            <% @questions.each do |q| %>
-              <li>
-                <% str = counter.to_s %>
-                <% counter+=1 %>
-                <%= link_to str,"/question/#{q.id}" %>
-              </li>
-            <% end %> 
-      </ul>
-    </nav>
-  </div>
-</aside>
