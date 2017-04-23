@@ -28,7 +28,7 @@ setInterval(function(){
     document.getElementById("timer").innerText=days+"days "+hours+"hours "+minutes+"mins "+seconds+"sec";
 
 },1000);
- function onBodyLoad(){	
+ /*function onBodyLoad(){	
 	document.getElementById("next_question").addEventListener("click",function(event){
 	event.preventDefault();
 	$.ajax({
@@ -58,4 +58,4 @@ setInterval(function(){
 }
 window.addEventListener("load",function(){
 	onBodyLoad();
-})
+})*/
