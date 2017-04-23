@@ -6,7 +6,7 @@
 .question{
 	display: flex;
 	flex-direction: column;
-	width: 50%;
+	width: 70%;
 }
 
 
@@ -76,4 +76,10 @@ form>h4{
 #start_next_question{
 	position:relative;
 	left:90%;
+}
+
+.page{
+	width: 50vw;
+	display:flex;
+	justify-content: space-between;
 }

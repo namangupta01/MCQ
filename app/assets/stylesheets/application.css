@@ -18,9 +18,8 @@
 
 main{
 	position: absolute;
-	width: 100%;
-	left: 10%;
-	top: 10%;
+	left: 20%;
+	top: 20%;
 }
 aside{
 	position: absolute;
