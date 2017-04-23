@@ -27,13 +27,10 @@ class HomeController < ApplicationController
 	end
 
 	def next_question
-		byebug
 		question_id=params["question_id"].to_i
-		byebug
 		data=Hash.new
-		question=Question.find_by_id(question_id+1)
+		question=Question.where('id > ?',question_id).first
 		data["question"]=question
-		byebug
 		render json: data
 	end
 
@@ -44,7 +41,8 @@ class HomeController < ApplicationController
 		end
 	end
 
-	def submit 
+
+	def submit
 		@score=0
 		score = Score.find_by_user_id(current_user.id)
 		if score

@@ -18,15 +18,14 @@
 
 main{
 	position: absolute;
-	left: 20%;
-	top: 20%;
+	left: 5%;
+	top: 15%;
+	width: 60%;
 }
 aside{
 	position: absolute;
-	left: 70%;
-	top: 10%;
-	width: 20%;
-	background-color: yellow;
+	left: 50%;
+	top: 15%;
 }
 aside div {
 	display: flex;
