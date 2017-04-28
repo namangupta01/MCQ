@@ -15,30 +15,18 @@
  */
 
 
-
 main{
 	position: absolute;
-	left: 5%;
-	top: 15%;
+	left: 11%;
+	top: 16%;
 	width: 60%;
 }
 aside{
 	position: absolute;
-	left: 50%;
+	width: 33%;
+	left: 65%;
 	top: 15%;
-}
-aside div {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-aside div div {
-
-	margin: 0 0 0 0;
-	padding: 2% 2% 2% 2%;
-	width: 10%;
-	border: solid thin black;
-	z-index: 10;
+	padding: 0 0 0 0;
 }
 #timer{
 	position: fixed;
