@@ -4,7 +4,7 @@
       <ul class="pagination">
         <% counter=1 %> 
             <% @questions.each do |q| %>
-              <li>
+              <li id="aside-link">
                 <% str = counter.to_s %>
                 <% counter+=1 %>
                 <%= link_to str,"/question/#{q.id}" %>

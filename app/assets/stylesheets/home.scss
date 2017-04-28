@@ -44,7 +44,11 @@
 #next_question{
 }
 form{
-	border: 2px solid lightgrey;
+	border: 2px solid lightgrey;.page{
+	width: 50vw;
+	display:flex;
+	justify-content: space-between;
+}
 	padding: 28px;
 }
 
@@ -79,7 +83,15 @@ form>h4{
 }
 
 .page{
-	width: 50vw;
+	width: 80%;
 	display:flex;
 	justify-content: space-between;
 }
+
+#aside-link a{
+	width: 7%;
+	text-align:center;
+	margin-left:0px;
+	margin-top:1%;
+}
+
