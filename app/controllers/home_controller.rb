@@ -3,7 +3,6 @@ class HomeController < ApplicationController
 	before_action :test_completed? , except: [:submit]
 
 	def index
-
 	end
 
 	def question
@@ -70,10 +69,6 @@ class HomeController < ApplicationController
 	end
 
 	def start
-		@question = Question.first
-		@questions=Question.all
-		total_questions=@questions.length
-		answered=current_user.user_responses.all.length
-		@percentage=answered*100/total_questions
+		return redirect_to "/question/#{Question.first.id}"
 	end
 end
