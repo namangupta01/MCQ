@@ -59,3 +59,22 @@ aside{
 	color: white;
 	text-decoration: none;
 }
+#submit-question{
+	border: solid white;
+	border-radius:0;
+	background: #e3e3e3 ;
+	color:black;
+}
+#previous-question{
+	border: solid white;
+	border-radius:0;
+	background: #e3e3e3 ;
+	color:black;
+}
+#next-question{
+	display: relative;
+	border: solid white;
+	border-radius:0;
+	background: #e3e3e3 ;
+	color: black;
+}
