@@ -1,0 +1,13 @@
+<div id="contest-list">
+	<% contests = Contest.all %>
+	<% contests.each do |contest| %>
+		<div class="container">
+			<div class="jumbotron text-center">
+				<h1><%= contest.name %></h1>	
+				<p><%= contest.detail %></p>
+				
+		<p><%= link_to 'Start' , url_for(controller: :home , action: :start),method: :get,:class => "btn btn-success btn-lg"%></p>
+	</div>
+</div>	
+	<% end %>
+</div>
