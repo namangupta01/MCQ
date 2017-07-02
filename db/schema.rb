@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170702071523) do
+ActiveRecord::Schema.define(version: 20170702072649) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -49,7 +49,14 @@ ActiveRecord::Schema.define(version: 20170702071523) do
   create_table "contests", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
+    t.integer  "user_id"
+    t.string   "detail"
+    t.string   "start_date"
+    t.string   "end_date"
   end
+
+  add_index "contests", ["user_id"], name: "index_contests_on_user_id"
 
   create_table "questions", force: :cascade do |t|
     t.string   "question_content", null: false
